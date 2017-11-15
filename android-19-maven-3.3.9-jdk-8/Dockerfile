@@ -34,6 +34,9 @@ RUN chown -R root: ${ANDROID_HOME} && chmod 777 -R ${ANDROID_HOME}
 RUN which adb
 RUN which android
 
+RUN apt-get install -y --force-yes expect \
+  ant
+
 # Cleaning
 RUN apt-get clean
 
